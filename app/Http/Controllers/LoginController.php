@@ -11,4 +11,19 @@ class LoginController extends Controller
     {
         return view('auth/login');
     }
+
+    public function proses(Request $request)
+    {
+        if(Auth::attempt($request->only('email', 'password'))) {
+            return redirect('/dashboard');
+        }
+
+        return redirect('/loginadmin');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/loginadmin');
+    }
 }
