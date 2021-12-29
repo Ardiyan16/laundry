@@ -16,15 +16,17 @@
     <link rel="apple-touch-icon" href="{{ ('admin/apple-icon.png') }}">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="{{ ('admin/vendors/bootstrap/dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ ('admin/vendors/font-awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ ('admin/vendors/themify-icons/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ ('admin/vendors/flag-icon-css/css/flag-icon.min.css') }}">
-    <link rel="stylesheet" href="{{ ('admin/vendors/selectFX/css/cs-skin-elastic.css') }}">
-    <link rel="stylesheet" href="{{ ('admin/vendors/jqvmap/dist/jqvmap.min.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/vendors/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/vendors/themify-icons/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/vendors/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/vendors/selectFX/css/cs-skin-elastic.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/vendors/jqvmap/dist/jqvmap.min.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css') }}">
 
 
-    <link rel="stylesheet" href="{{ ('admin/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url('admin/assets/css/style.css') }}">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -42,8 +44,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#"><img src="{{ ('admin/images/logo_laundry2.png') }}" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="#"><img src="{{ ('admin/images/logo_laundry3.png') }}" alt="Logo"></a>
+                <a class="navbar-brand" href="#"><img src="{{ url('admin/images/tefa.png') }}" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="#"><img src="{{ url('admin/images/logo_laundry3.png') }}" alt="Logo"></a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -51,30 +53,29 @@
                     <li class="active">
                         <a href="{{ url('/dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
-                    <h3 class="menu-title">Transaksi</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">Menu</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-exchange"></i>Transaksi</a>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-calendar"></i>Penjadwalan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-shopping-cart"></i><a href="{{ url('/order') }}">Order</a></li>
-                            <li><i class="fa fa-file"></i><a href="ui-badges.html">Data Order</a></li>
-                            <li><i class="fa fa-mobile"></i><a href="ui-badges.html">Order Online</a></li>
-                            <li><i class="fa fa-history"></i><a href="ui-badges.html">Riwayat Order</a></li>
+                            <li><i class="fa fa-plus"></i><a href="{{ url('/t_penjadwalan') }}">Tambah Penjadwalan</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ url('/penjadwalan') }}">Data Penjadwalan</a></li>
+                            <li><i class="fa fa-history"></i><a href="">Riwayat Penjadwalan</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Data Konsumen</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Karyawan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Konsumen</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-data.html">Konsumen Online</a></li>
+                            <li><i class="fa fa-plus"></i><a href="tables-basic.html">Tambah Karyawan</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables-data.html">Data Karyawan</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children dropdown">
+                    <!-- <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Manajemen Penghasilan </a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa fa-money"></i><a href="forms-basic.html">Laporan Keuangan</a></li>
                             <li><i class="menu-icon fa fa-file"></i><a href="forms-advanced.html">Laporan Lain lain</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -139,18 +140,30 @@
 
     <!-- Right Panel -->
 
-    <script src="{{ ('admin/vendors/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ ('admin/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
-    <script src="{{ ('admin/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src="{{ ('admin/assets/js/main.js')  }}"></script>
+    <script src="{{ url('admin/vendors/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url('admin/assets/js/main.js')  }}"></script>
 
 
-    <script src="{{ ('admin/vendors/chart.js/dist/Chart.bundle.min.js') }}"></script>
-    <script src="{{ ('admin/assets/js/dashboard.js')  }}"></script>
-    <script src="{{ ('admin/assets/js/widgets.js')  }}"></script>
-    <script src="{{ ('admin/vendors/jqvmap/dist/jquery.vmap.min.js') }}"></script>
-    <script src="{{ ('admin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
-    <script src="{{ ('admin/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+    <script src="{{ url('admin/vendors/chart.js/dist/Chart.bundle.min.js') }}"></script>
+    <script src="{{ url('admin/assets/js/dashboard.js')  }}"></script>
+    <script src="{{ url('admin/assets/js/widgets.js')  }}"></script>
+    <script src="{{ url('admin/vendors/jqvmap/dist/jquery.vmap.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
+    <script src="{{ url('admin/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+
+    <script src="{{ url('admin/vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/jszip/dist/jszip.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/pdfmake/build/pdfmake.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/pdfmake/build/vfs_fonts.js') }}"></script>
+    <script src="{{ url('admin/vendors/datatables.net-buttons/js/buttons.html5.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/datatables.net-buttons/js/buttons.print.min.js') }}"></script>
+    <script src="{{ url('admin/vendors/datatables.net-buttons/js/buttons.colVis.min.js') }}"></script>
+    <script src="{{ url('admin/assets/js/init-scripts/data-table/datatables-init.js') }}"></script>
     <script>
         (function($) {
             "use strict";

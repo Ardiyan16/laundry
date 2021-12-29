@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PenjadwalanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +27,6 @@ Route::get('/logoutadmin', [LoginController::class, 'logout']);
 
 //admin
 Route::get('/dashboard', [AdminController::class, 'index']);
-Route::get('/order', [OrderController::class, 'index']);
+Route::get('/penjadwalan', [PenjadwalanController::class, 'index']);
+Route::get('/t_penjadwalan', [PenjadwalanController::class, 't_penjadwalan']);
+Route::resource('savej', PenjadwalanController::class);

@@ -2,7 +2,7 @@
 @section('adminlayout')
 
 <div class="row wrapper border-bottom white-bg page-heading">
-    <h1 class="ml-3">Selamat Datang, </h1>
+    <h1 class="ml-3">Selamat Datang, Admin</h1>
     <h4 style=" margin-left: 80%;">
         <script type='text/javascript'>
             var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
