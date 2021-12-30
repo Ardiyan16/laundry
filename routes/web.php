@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PenjadwalanController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\RangkaianController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +33,7 @@ Route::get('/dashboard', [AdminController::class, 'index']);
 Route::get('/penjadwalan', [PenjadwalanController::class, 'index']);
 Route::get('/t_penjadwalan', [PenjadwalanController::class, 't_penjadwalan']);
 Route::resource('savej', PenjadwalanController::class);
+Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/t_pegawai', [PegawaiController::class, 'create']);
+Route::resource('savep', PegawaiController::class);
+Route::get('/rangkaian', [RangkaianController::class, 'index']);

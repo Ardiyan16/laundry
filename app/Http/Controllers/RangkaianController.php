@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Pegawai;
+use App\Models\Rangkaian;
 
-class PegawaiController extends Controller
+class RangkaianController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        $this->param['title'] = 'Data Pegawai';
-        $this->param['view'] = Pegawai::all();
-        return view('admin/v_pegawai', $this->param);
+        $this->param['title'] = 'Rangkaian';
+        $this->param['view'] = Rangkaian::all();
+        return view('admin.rangkaian', $this->param);
     }
 
     /**
@@ -26,8 +26,7 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        $this->param['title'] = 'Tambah Pegawai';
-        return view('admin/t_pegawai', $this->param);
+        //
     }
 
     /**
@@ -38,16 +37,7 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => 'required',
-            'alamat' => 'required',
-            'no_telp' => 'required|max:13',
-            'email' => 'required',
-            'password' => 'required'
-        ]);
-        $input = $request->all();
-        Pegawai::create($input);
-        return redirect('/pegawai')->with('success', 'Data pegawai berhasil ditambahkan!');
+        //
     }
 
     /**
@@ -69,9 +59,7 @@ class PegawaiController extends Controller
      */
     public function edit($id)
     {
-        $this->param['title'] = 'Edit Pegawai';
-        $this->param['edit'] = Pegawai::findOrFail($id);
-        return view('admin/e_pegawai', $this->param);
+        //
     }
 
     /**
@@ -83,15 +71,7 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'nama' => 'required',
-            'alamat' => 'required',
-            'no_telp' => 'required|max:13',
-            'email' => 'required'
-        ]);
-
-        Pegawai::find($id)->update($request->all());
-        return redirect('/pegawai')->with('success', 'Pegawai berhasil diupdate!');
+        //
     }
 
     /**
@@ -102,8 +82,6 @@ class PegawaiController extends Controller
      */
     public function destroy($id)
     {
-        $delete = Pegawai::find($id);
-        $delete->delete();
-        return redirect('/pegawai')->with('success', 'Pegawai berhasil dihapus!');
+        //
     }
 }

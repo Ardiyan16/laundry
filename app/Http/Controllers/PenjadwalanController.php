@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Penjadwalan;
-use App\Models\Post;
 
 class PenjadwalanController extends Controller
 {
