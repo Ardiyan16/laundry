@@ -117,6 +117,22 @@
                         @enderror
                     </div>
                 </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="disabled-input" class=" form-control-label">Rangkaian Tanam</label></div>
+                    <div class="col-12 col-md-9">
+                        <select name="id_rangkaian" class="form-control">
+                            <option>--Pilih Rangkaian Tanam--</option>
+                            @foreach ($rangkaian as $r)
+                                @if (old('id_rangkaian') == $r->id)
+                                    <option value="{{ $r->id }}" selected>{{ $r->rangkaian }}</option>
+                                @else
+                                    <option value="{{ $r->id }}">{{ $r->rangkaian }}</option>
+                                @endif
+                            @endforeach
+                        </select>
+                    </div>
+                    <input type="hidden" id="disabled-input" name="status" placeholder="Keterangan..." value="belum" class="form-control  @error('status') is-invalid @enderror">
+                </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary btn-sm">
                         <i class="fa fa-send"></i> Simpan

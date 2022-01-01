@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Rangkaian extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'rangkaian'
+    ];
 }

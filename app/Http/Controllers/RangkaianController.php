@@ -37,7 +37,13 @@ class RangkaianController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'rangkaian' => 'required'
+        ]);
+
+        $input = $request->all();
+        Rangkaian::create($input);
+        return redirect('/rangkaian')->with('success', 'Data rangkaian berhasil ditambahkan!');
     }
 
     /**
@@ -82,6 +88,8 @@ class RangkaianController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Rangkaian::find($id);
+        $delete->delete();
+        return redirect('/rangkaian')->with('success', 'Pegawai berhasil dihapus!');
     }
 }

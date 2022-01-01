@@ -59,7 +59,7 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-plus"></i><a href="{{ url('/t_penjadwalan') }}">Tambah Penjadwalan</a></li>
                             <li><i class="fa fa-table"></i><a href="{{ url('/penjadwalan') }}">Data Penjadwalan</a></li>
-                            <li><i class="fa fa-history"></i><a href="">Riwayat Penjadwalan</a></li>
+                            <li><i class="fa fa-history"></i><a href="{{ url('/penjadwalan/riwayat') }}">Riwayat Penjadwalan</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -69,8 +69,15 @@
                             <li><i class="fa fa-table"></i><a href="{{ url('/pegawai') }}">Data Karyawan</a></li>
                         </ul>
                     </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Hasil Tanam</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="{{ url('/hasilpanen') }}">Hasil Panen</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ url('/hasilpanen/riwayat') }}">Riwayat Tanam/Panen</a></li>
+                        </ul>
+                    </li>
                     <li>
-                        <a href="{{ url('/rangkaian') }}"><i class="menu-icon fa fa-bar-chart"></i>Rangkaian Tanam </a>
+                        <a href="{{ url('/rangkaian') }}"><i class="menu-icon fa fa-table"></i>Rangkaian Tanam </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
