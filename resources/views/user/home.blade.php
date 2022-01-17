@@ -8,7 +8,8 @@
 
     <div class="video-overlay header-text">
         <div class="caption">
-            <h6></h6>
+            <h4 style="color: white">Selamat Datang di</h4>
+                <h2>Tefa <em style="color: greenyellow">Greenhouse</em></h2>
             <div class="main-button scroll-to-section">
             </div>
         </div>
@@ -36,7 +37,6 @@
                         <div class="right-content">
                             <h4>Penjadwalan Tanaman</h4>
                             <p>Penjadwalan tanaman dilakukan dengan sistem penjadwalan.</p>
-                            <a href="#" class="text-button">Discover More</a>
                         </div>
                     </li>
                     <li class="feature-item">
@@ -46,7 +46,6 @@
                         <div class="right-content">
                             <h4>Karyawan</h4>
                             <p>Karyawan merupakan menu untuk data-data karyawan tefa greenhouse.</p>
-                            <a href="#" class="text-button">Discover More</a>
                         </div>
                     </li>
                     <li class="feature-item">
@@ -56,7 +55,6 @@
                         <div class="right-content">
                             <h4>Rangkaian Tanam</h4>
                             <p>rangkaian tanam merupakan rangkaian-rangkaian proses tanam pada tanaman holtikultura.</p>
-                            <a href="#" class="text-button">Discover More</a>
                         </div>
                     </li>
                 </ul>
@@ -70,7 +68,6 @@
                         <div class="right-content">
                             <h4>Hasil Tanam</h4>
                             <p>Hasil tanam merupakan informasi mengenai hasil dari tanam / hasil panen tefa greenhouse .</p>
-                            <a href="#" class="text-button">Discover More</a>
                         </div>
                     </li>
                 </ul>
@@ -104,7 +101,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div id="map">
-                  <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.4234881763405!2d113.72096101433053!3d-8.160017184012847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695b617d8f623%3A0xf6c4437632474338!2sPoliteknik%20Negeri%20Jember!5e0!3m2!1sid!2sid!4v1642426295234!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12">

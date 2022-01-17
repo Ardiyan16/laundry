@@ -49,7 +49,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">Tefa<em style="color: greenyellow"> Greenhouse</em></a>
+                        <a href="{{ url('homeuser') }}" class="logo" >Tefa<em style="color: greenyellow"> Greenhouse</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">

@@ -58,7 +58,7 @@
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $jdwl->kegiatan }}</td>
-                                    <td>{{ $jdwl->tanggal }} / {{ $jdwl->jam }}</td>
+                                    <td>{{ date('d-m-Y', strtotime($jdwl->tanggal)) }} / {{ $jdwl->jam }}</td>
                                     <td>{{ $jdwl->keterangan }}</td>
                                     <td>{{ $jdwl->rangkaian }}</td>
                                     <td>{{ $jdwl->status }}</td>
