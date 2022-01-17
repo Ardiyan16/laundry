@@ -7,6 +7,7 @@ use App\Http\Controllers\PenjadwalanController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\RangkaianController;
 use App\Http\Controllers\HasilController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,4 +50,10 @@ Route::resource('rangkaian', RangkaianController::class);
 Route::get('/hasilpanen', [HasilController::class, 'index']);
 Route::get('/hasilpanen/riwayat', [HasilController::class, 'r_hasil']);
 Route::resource('saveh', HasilController::class);
+
+//user
+Route::get('/homeuser', [UserController::class, 'index']);
+Route::get('/homeuser/rangkaian_tanam', [UserController::class, 'rangkaian_tanam']);
+Route::get('/homeuser/penjadwalan', [UserController::class, 'penjadwalan']);
+Route::get('/homeuser/hasil_tanam', [UserController::class, 'hasil_tanam']);
 
